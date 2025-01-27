@@ -1,0 +1,233 @@
+.popdigital {
+  padding: 0 1em 2em;
+  
+  @media (max-width: 1024px) {
+    padding: 2em 1em;
+  }
+  
+  &__content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      gap: 1em;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1em;
+
+    @media (max-width: 1024px) {
+      max-width: 40em;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 6em;
+    height: auto;
+    aspect-ratio: 103/88;
+  }
+
+  &__h2 {
+    color: var(--white);
+    font-family: var(--type-black);
+    font-size: 3em;
+    text-transform: uppercase;
+    line-height: 1;
+
+    @media (max-width: 1280px) {
+      font-size: 2.5em;
+    }
+    
+    @media (max-width: 480px) {
+      font-size: 2em;
+    }
+  }
+
+  &__p {
+    color: var(--white);
+    font-family: var(--type-medium);
+    font-size: 1.1em;
+    
+    @media (max-width: 480px) {
+      font-size: initial;
+    }
+  }
+
+  &__a {
+    margin: 1em 0 0;
+    padding: .75em 1.5em;
+    border: 1px solid var(--white);
+    border-radius: 2em;
+    color: var(--white);
+    font-family: var(--type-bold);
+    font-size: .875em;
+    text-transform: uppercase;
+
+    &:hover {
+      color: var(--carbon-black);
+      background-color: var(--white);
+    }
+  }
+
+  &__media {
+    position: relative;
+  }
+
+  &__slider {
+    width: 100%;
+    max-width: 35em;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__slides {
+    width: calc(100% * 6);
+    display: flex;
+    
+    transition: transform .3s ease;
+  }
+  
+  &__slide {
+    width: calc(100% / 6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: relative;
+    aspect-ratio: 1/1;
+  
+     &::before {
+      content: '';
+      width: 75%;
+      height: 75%;
+      display: block;
+      padding: 0em 0;
+      border-radius: 100%;
+      background-color: #171717;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    } 
+  }
+  
+  &__img {
+    width: 100%;
+    max-width: 50%;
+    height: auto;
+    aspect-ratio: 254/329;
+    object-fit: cover;
+  }
+
+  /* Slider controls (arrows & dots) */
+
+  &__controls {}
+  
+  .arrows {
+    width: 100%;
+
+    &__control {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: .5em;
+      border: none;
+      border-radius: 100%;
+      background-color: #171717;
+      cursor: pointer;
+
+      &--previous {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      &--next {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+
+      &:hover {
+        background-color: rgba(255 255 255 / .125);
+      }
+    }
+
+    &__svg {
+      width: 1.25em;
+      height: 1.25em;
+      fill: transparent;
+      stroke: var(--white);
+      filter: drop-shadow(0 0 4px var(--black));
+
+      &--previous {
+        transform: translateX(-5%);
+      }
+
+      &--next {
+        transform: translateX(5%);
+      }
+
+      @media (max-width: 1024px) {
+        width: 1em;
+        height: 1em;
+      }
+    }
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    @media (max-width: 1024px) {
+      bottom: 0;
+      gap: 1.25em;
+    }
+
+    &__li {}
+
+    &__control {
+      width: .625em;
+      height: .625em;
+      border: none;
+      border-radius: 100%;
+      background-color: var(--white);
+      cursor: pointer;
+  
+      &:hover, &--active {
+        outline: 1px solid var(--white);
+        outline-offset: 2px;
+      }
+
+      @media (max-width: 1024px) {
+        width: .5em;
+        height: .5em;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import 'partials/_reset', 'partials/_fonts', 'partials/_custom';
+
+@import 'sections/_header';
+@import 'sections/_banner';
+@import 'sections/_main';
+@import 'sections/_prefooter';
+@import 'sections/_footer';
+
+.center {
+  width: 100%;
+  max-width: 100em;
+  margin: 0 auto;
+}
+
+.widescreen-block {
+  width: 100%;
+  max-width: 120em;
+  margin: 0 auto;
+}

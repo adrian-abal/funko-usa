@@ -1,0 +1,60 @@
+.prefooter {
+  padding: 2em 1em;
+  background-color: #171717;
+
+  &__rrss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+
+  &__li {
+
+  }
+
+  &__a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .75em;
+    border-radius: 100%;
+    background-color: var(--white);
+    filter: grayscale(1);
+
+    &:hover {
+      filter: none;
+      transform: scale(1.1);
+
+      .prefooter__svg {
+
+        &--instagram {
+          fill: #E4405F;
+        }
+    
+        &--youtube {
+          fill: #FF0000;
+        }
+    
+        &--facebook {
+          fill: #1877F2;
+        }
+    
+        &--x {
+          fill: var(--black);
+        }
+      }
+    }
+  }
+
+  &__svg {
+    width: 1.75em;
+    height: 1.75em;
+    fill: var(--black);
+
+    @media (max-width: 480px) {
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+}

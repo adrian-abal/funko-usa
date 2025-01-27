@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <script defer src="js/app.js"></script>
+    <title>Funko</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__top top">
+        <div class="center">
+          <div class="top__wrapper">
+            <div class="top__brands">
+              <img class="top__img top__img--funko" src="assets/svg/site-logo-blue.svg" width="300" height="68" alt="Funko logo" />
+              <div class="top__separator" aria-hidden="true"></div>
+              <a class="top__a" href="#" title="Loungefly homepage">
+                <img class="top__img top__img--loungefly" src="assets/svg/loungefly-logo-white.svg" width="300" height="68" alt="Loungefly logo" />
+              </a>
+            </div>
+
+            <div class="top__utilities">
+              <a class="top__a" href="#" title="Funko Fan Rewards program">
+                <img class="top__img top__img--rewards" src="assets/svg/loyalty-logo.svg" width="25" height="22" alt="Funko Fan Rewards logo" />
+              </a>
+              <button class="top__region" aria-label="Set region">
+                <img class="top__img top__img--flag" src="assets/svg/us-flag.svg" width="22" height="16" alt="United States of America flag" />
+                <span class="top__location">US</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__navbar navbar">
+        <div class="center">
+          <div class="navbar__container">
+            <div class="navbar__main">
+              <button class="navbar__menu-mobile" aria-label="Menu">
+                <svg class="navbar__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+              </button>
+               <div class="navbar__main-wrapper">
+                <a class="navbar__homepage" href="#" title="Funko homepage">
+                  <img class="navbar__logo" src="assets/svg/site-logo.svg" width="300" height="106" alt="Funko logo" />
+                </a>
+                <nav class="navbar__nav nav">
+                  <a class="nav__a" href="#" title="Gifting">Gifting</a>
+                  <a class="nav__a" href="#" title="Fandoms">Fandoms</a>
+                  <a class="nav__a" href="#" title="Category">Category</a>
+                  <a class="nav__a" href="#" title="Featured">Featured</a>
+                  <a class="nav__a" href="#" title="POP! Yourself">POP! Yourself</a>
+                </nav>
+              </div>
+            </div>
+
+            <div class="navbar__user-actions user-actions">
+              <div class="user-actions__search-container">
+                <input class="user-actions__input" type="text" placeholder="Search" required>
+                <button class="user-actions__submit" aria-label="Go search">
+                  <svg class="user-actions__svg user-actions__svg--search" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                  </svg>
+                </button>
+              </div>    
+              <a class="user-actions__a" href="#" title="Wishlist">
+                <svg class="user-actions__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                </svg>
+              </a>
+              <a class="user-actions__a" href="#" title="Login">
+                <svg class="user-actions__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg>
+              </a>
+              <a class="user-actions__a user-actions__a--shopping-bag" href="#" title="Shopping bag">
+                <svg class="user-actions__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                </svg>
+                <span class="user-actions__counter">0</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__bottom announcements">
+        <div class="center">
+          <div class="announcements__wrapper">
+            <div class="announcements__slider">
+              <div class="announcements__slides">
+                <div class="announcements__slide">
+                  <a class="announcements__a" href="#" title="Donate to AmeriCare">Customers can donate to AmeriCares to support urgent needs in Southern California upon purchase. Learn More</a>
+                </div>
+                <div class="announcements__slide">
+                  <a class="announcements__a" href="#" title="Donate to AmeriCare">Free Shipping on Orders $65</a>
+                </div>
+              </div>
+
+              <div class="announcements__controls">
+                <div class="announcements__arrows arrows">
+                  <button class="arrows__control" data-direction="previous" aria-label="Previous promotion">
+                    <svg class="arrows__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"  fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M15 6l-6 6l6 6" />
+                    </svg>
+                  </button>
+                  <button class="arrows__control" data-direction="next" aria-label="Next promotion">
+                    <svg class="arrows__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"  fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M9 6l6 6l-6 6" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="widescreen-block">
+      <div class="banner">
+        <div class="center">
+          <div class="banner__content">
+            <div class="banner__info">
+              <a class="banner__a banner__a--product" href="#" title="POP! Baymax with Mochi">
+              <img class="banner__img" src="assets/img/84445_Disney_BigHero6_BaymaxWithMochi_POPSuper_GLAM-WEB.png" width="800" height="800" alt="POP! Baymax with Mochi" />
+              </a>
+              <div class="banner__text-info">
+                <h2 class="banner__h2">New exclusive: POP! Baymax with Mochi</h2>
+                <div id="banner-exclusive" class="banner__more">
+                  <p class="banner__p">Collect the dynamic duo from Disney's Big Hero 6!</p>
+                  <a class="banner__a banner__a--collection" href="#" title="Disney collection">Shop now</a>
+                </div>
+              </div>
+            </div>
+            <button class="banner__button" aria-label="Expand/collapse banner" aria-controls="banner-exclusive" aria-expanded="false">
+              <svg class="banner__svg" xmlns="http://www.w3.org/2000/svg" width="24"  height="24"  viewBox="0 0 24 24" fill="none" stroke="currentColor"  stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M6 9l6 6l6 -6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <main class="main">
+        <section class="hero">
+          <div class="hero__slider">
+            <div class="hero__slides">
+              <article class="hero__slide hero__slide--first">
+                <div class="center">
+                  <div class="hero__content">
+                    <div class="hero__info">
+                      <span class="hero__span">Careful—they bite</span>
+                      <h2 class="hero__h2">Teething Has Never Been So Dangerous</h2>
+                      <p class="hero__p">Need a new attraction for your park? Welcome these POP! hatchlings to the world by adding them to your collection!</p>
+                      <a class="hero__a hero__a--first" href="#" title="Jurassik Park collection">Shop collection</a>
+                    </div>
+                    <img class="hero__img" src="assets/img/Feature_JurassicParkHatchlings_Products.png" width="800" height="615" alt="Velociraptor, T. Rex and Dilophosaurus" />
+                  </div>
+                </div>
+              </article>
+
+              <article class="hero__slide hero__slide--second">
+                <div class="center">
+                  <div class="hero__content">
+                    <div class="hero__info">
+                      <span class="hero__span ">Best forever friends</span>
+                      <h2 class="hero__h2">Revive the Magic This Valentine’s Day</h2>
+                      <p class="hero__p">Discover your passion with our newest set of collectibles.</p>
+                      <a class="hero__a hero__a--second" href="#" title="Valentine’s gifts">Shop gift guide</a>
+                    </div>
+                    <img class="hero__img" src="assets/img/Feature-ChuckyVDay-Products.png" width="800" height="615" alt="Chucky with flower and Tiffany with heart box" loading="lazy" />
+                  </div>
+                </div>
+              </article>
+
+              <article class="hero__slide hero__slide--third">
+                <div class="center">
+                  <div class="hero__content">
+                    <div class="hero__info">
+                      <span class="hero__span">POP! Yourself</span>
+                      <h2 class="hero__h2">Celebrate Your Fun & Only</h2>
+                      <p class="hero__p">Customize a POP! Yourself Valentine’s Day gift that’s as unique as they are.</p>
+                      <a class="hero__a hero__a--third" href="#" title="Build your custom pop">Customize now</a>
+                    </div>
+                    <img class="hero__img" src="assets/img/PY_VDAY25_WEB_HomepageBanner_ CharacterA.png" width="800" height="615" alt="Get customized pop" loading="lazy" />
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="hero__controls">
+              <div class="hero__arrows arrows">
+                <button class="arrows__control arrows__control--previous" data-direction="previous" aria-label="Previous slide">
+                  <svg class="arrows__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M15 6l-6 6l6 6" />
+                  </svg>
+                </button>
+                <button class="arrows__control arrows__control--next" data-direction="next" aria-label="Next slide">
+                  <svg class="arrows__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M9 6l6 6l-6 6" />
+                  </svg>
+                </button>
+              </div>
+              
+              <ol class="hero__dots dots">
+                <li class="dots__li">
+                  <button class="dots__control dots__control--active" data-dot="0" aria-label="Slide 1"></button>
+                </li>
+                <li class="dots__li">
+                  <button class="dots__control" data-dot="1" aria-label="Slide 2"></button>
+                </li>
+                <li class="dots__li">
+                  <button class="dots__control" data-dot="2" aria-label="Slide 3"></button>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <section class="exclusive">
+          <div class="center">
+            <article class="exclusive__article">
+              <div class="exclusive__content">
+                <div class="exclusive__info">
+                  <img class="exclusive__tag" src="assets/img/badge.png" width="86" height="49" alt="Exclusive products" />
+                  <h2 class="exclusive__h2">POP! Elektra</h2>
+                  <p class="exclusive__p">Who could forget? Reunite with the exclusive POP! Elektra from Marvel Studios’ Deadpool & Wolverine.</p>
+                  <a class="exclusive__a" href="#" title="Exclusives">Shop exclusive</a>
+                </div>
+                <div class="exclusive__overview">
+                  <img class="exclusive__product" src="assets/img/88644_POPMarvel_DP3_POP4_POP_GLAM-WEB.png" width="346" height="346" alt="POP! Elektra" />
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="products">
+          <h2 class="products__h2">New Picks for You</h2>
+            <div class="center">
+              <div class="products__carousel">
+                <ul class="products__ul"></ul>
+                
+                <div class="products__arrows arrows">
+                  <button class="arrows__control arrows__control--previous" data-direction="previous" aria-label="Previous product">
+                    <svg class="arrows__svg arrows__svg--previous" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M15 6l-6 6l6 6" />
+                    </svg>
+                  </button>
+                  <button class="arrows__control arrows__control--next" data-direction="next" aria-label="Next product">
+                    <svg class="arrows__svg arrows__svg--next" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M9 6l6 6l-6 6" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <section class="collection">
+          <div class="collection__column collection__column--left">
+            <article class="collection__article collection__article--left">
+              <div class="collection__content">
+                <div class="collection__info">
+                  <h2 class="collection__h2">Dont Ghost ‘Em</h2>
+                  <p class="collection__p">Bust out the Ghostbusters collectibles.</p>
+                  <a class="collection__a collection__a--left" href="#" title="Ghostbusters collection">Shop collection</a>
+                </div>
+                <img class="collection__product" src="assets/img/83473_TRG_WinstonZeddemore_POP_GLAM-1-WEB.png" width="800" height="800" alt="POP! Winston Zeddemore (The Real Ghostbusters)" loading="lazy" />
+              </div>
+            </article>
+          </div>
+
+          <div class="collection__column collection__column--right">
+            <article class="collection__article collection__article--right">
+                <div class="collection__content collection__content--reverse">
+                  <div class="collection__info">
+                    <h2 class="collection__h2">Flirty and Thriving</h2>
+                    <p class="collection__p">Stay golden with movie and TV moments.</p>
+                    <a class="collection__a collection__a--right" href="#" title="Comedy collection">Shop collection</a>
+                  </div>
+                    <img class="collection__product" src="assets/img/83501_GG40th_DOROTHY_POP_GLAM-1-WEB.png" width="800" height="800" alt="POP! Dorothy in gym outfit (fabulous 40)" loading="lazy" />
+                </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="fandom">
+          <h2 class="fandom__h2">Funko Fandom!</h2>
+          <div class="center">
+            <div class="fandom__carousel">
+              <ul class="fandom__ul"></ul>
+
+              <div class="fandom__arrows arrows">
+                <button class="arrows__control arrows__control--previous" data-direction="previous" aria-label="Previous product">
+                  <svg class="arrows__svg arrows__svg--previous" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M15 6l-6 6l6 6" />
+                  </svg>
+                </button>
+                <button class="arrows__control arrows__control--next" data-direction="next" aria-label="Next product">
+                  <svg class="arrows__svg arrows__svg--next" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M9 6l6 6l-6 6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="promo promo--first">
+          <div class="center">
+            <div class="promo__content">
+              <div class="promo__info">
+                <h2 class="promo__h2">Pep your POP! & Hype your team</h2>
+                <p class="promo__p">POP! Yourself wearing an NFL hoodie or V-neck shirt & fill the stadium with epic POP! cheer.</p>
+                <a class="promo__a" href="#" title="Customize your POP!">Customize now</a>
+              </div>
+                <img class="promo__img promo__img--first" src="assets/img/promo/PYS_NFL_WEB_HomepageBanner_20Character.png" width="800" height="615" alt="Customize your POP! as NFL" />
+            </div>
+          </div>
+        </section>
+
+        <section class="promo promo--second">
+          <div class="center">
+            <div class="promo__content promo__content--reverse">
+              <div class="promo__info">
+                <h2 class="promo__h2">Ghostly Good Style</h2>
+                <p class="promo__p">Who’s ready to haunt in ghostly good style? Shop our new Zero-inspired collection, including our exclusive sequin glow-in-the-dark mini backpack!</p>
+                <a class="promo__a" href="#" title="The Nightmare Before Christmas collection">Shop collection</a>
+              </div>
+                <img class="promo__img promo__img--second" src="assets/img/promo/LF-tnbcv3-bundle-Product.png" width="886" height="680" alt="Zero Graveyard Light Up Mini and Zero Holiday Doors Full-Size backpacks" />
+            </div>
+          </div>
+        </section>
+
+        <section class="promo promo--third">
+          <div class="center">
+            <div class="promo__content">
+              <div class="promo__info">
+                <div class="promo__category category category--enable">
+                  <span class="category__span">Funko Presents</span>
+                </div>
+                <h2 class="promo__h2">Freddy's Dark Valentine Series 1</h2>
+                <p class="promo__p">Be mine... or else. Use Fan Rewards to collect Digital Pop! and land exclusive physicals. Available Feb 4 at 11:00 AM PST!</p>
+                <a class="promo__a" href="#" title="Learn about Freddy's Dark Valentine">View on Droppp</a>
+              </div>
+              <img class="promo__img promo__img--third" src="assets/img/promo/Feature-DFP-FreddysValentine.png" width="584" height="566" alt="Freddy's Dark Valentine" />
+            </div>
+          </div>
+        </section>
+
+        <section class="popdigital">
+          <div class="center">
+            <div class="popdigital__content">
+              <div class="popdigital__info">
+                <div class="popdigital__category category">
+                  <img class="popdigital__logo popdigital__logo--enable" src="assets/img/promo/Digital-pop-logov2.png" width="103" height="88" alt="POP! Digital" loading="lazy" />
+                </div>
+                <h2 class="popdigital__h2">Collect digital, land a physical</h2>
+                <p class="popdigital__p">Collect Digital Pop! on Droppp to redeem exclusive Pop! Vinyl figures from your favorite brands.</p>
+                <a class="popdigital__a" href="#" title="Learn more about POP! Digital POP!">Learn more</a>
+              </div>
+
+              <div class="popdigital__media">
+                <div class="popdigital__slider">
+                  <div class="popdigital__slides">
+                    <div class="popdigital__slide">
+                      <img class="popdigital__img" src="assets/img/promo/gallery-blade-digitalpop-lp-hp.png" width="508" height="658" alt="Harry Potter with Grindylow" loading="lazy" />
+                    </div>
+                    <div class="popdigital__slide">
+                      <img class="popdigital__img" src="assets/img/promo/gallery-blade-digitalpop-lp-got.png" width="508" height="658" alt="Daenerys Targaryen with Egg" loading="lazy" />
+                    </div>
+                    <div class="popdigital__slide">
+                      <img class="popdigital__img" src="assets/img/promo/gallery-blade-digitalpop-lp-bttf.png" width="508" height="658" alt="Doc 1885" loading="lazy" />
+                    </div>
+                    <div class="popdigital__slide">
+                      <img class="popdigital__img" src="assets/img/promo/gallery-blade-digitalpop-lp-tdk.png" width="508" height="658" alt="Harvey Dent" loading="lazy" />
+                    </div>
+                    <div class="popdigital__slide">
+                      <img class="popdigital__img" src="assets/img/promo/gallery-blade-digitalpop-lp-tmnt-bebop.png" width="508" height="658" alt="Bebop" loading="lazy" />
+                    </div>
+                    <div class="popdigital__slide">
+                      <img class="popdigital__img" src="assets/img/promo/gallery-blade-digitalpop-lp-pr.png" width="508" height="658" alt="Freddy Funko Megazord" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="popdigital__controls">
+                  <div class="popdigital__arrows arrows">
+                    <button class="arrows__control arrows__control--previous" data-direction="previous" aria-label="Previous slide">
+                      <svg class="arrows__svg arrows__svg--previous" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M15 6l-6 6l6 6" />
+                      </svg>
+                    </button>
+                    <button class="arrows__control arrows__control--next" data-direction="next" aria-label="Next slide">
+                      <svg class="arrows__svg arrows__svg--next" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M9 6l6 6l-6 6" />
+                      </svg>
+                    </button>
+                  </div>
+                  <ol class="popdigital__dots dots">
+                    <li class="dots__li">
+                      <button class="dots__control dots__control--active" data-dot="0" aria-label="Slide 1"></button>
+                    </li>
+                    <li class="dots__li">
+                      <button class="dots__control" data-dot="1" aria-label="Slide 2"></button>
+                    </li>
+                    <li class="dots__li">
+                      <button class="dots__control" data-dot="2" aria-label="Slide 3"></button>
+                    </li>
+                    <li class="dots__li">
+                      <button class="dots__control" data-dot="3" aria-label="Slide 4"></button>
+                    </li>
+                    <li class="dots__li">
+                      <button class="dots__control" data-dot="4" aria-label="Slide 5"></button>
+                    </li>
+                    <li class="dots__li">
+                      <button class="dots__control" data-dot="5" aria-label="Slide 6"></button>
+                    </li>
+                  </ol>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="prefooter">
+      <div class="center">
+        <ul class="prefooter__rrss">
+          <li class="prefooter__li">
+            <a class="prefooter__a" href="#" title="Instagram">
+              <svg class="prefooter__svg prefooter__svg--instagram" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+              </svg>
+            </a>
+          </li>
+          <li class="prefooter__li">
+            <a class="prefooter__a" href="#" title="YouTube">
+              <svg class="prefooter__svg prefooter__svg--youtube" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="prefooter__li">
+            <a class="prefooter__a" href="#" title="Facebook">
+              <svg class="prefooter__svg prefooter__svg--facebook" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+              </svg>
+            </a>
+          </li>
+          <li class="prefooter__li">
+            <a class="prefooter__a" href="#" title="X (formerly Twitter)">
+              <svg class="prefooter__svg prefooter__svg--x" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="prefooter__li">
+            <a class="prefooter__a" href="#" title="TikTok">
+              <svg class="prefooter__svg prefooter__svg--tiktok" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="center">
+        <div class="footer__top">
+          <img class="footer__logo" src="assets/svg/site-logo-blue.svg" width="300" height="68" alt="Funko blue logo" loading="lazy">
+          <div class="footer__info">
+            <div class="footer__cols">
+              <div class="footer__help footer__help--account">
+              <h3 class="footer__h3">Account</h3>
+              <ul class="footer__ul">
+                <li class="footer__li">
+                  <a class="footer__a" href="#" title="Account">Account</a>
+                </li>
+                <li class="footer__li">
+                  <a class="footer__a" href="#" title="Order History">Order History</a>
+                </li>
+                <li class="footer__li">
+                  <a class="footer__a" href="#" title="Funko POP! Yourself">Funko POP! Yourself</a>
+                </li>
+                <li class="footer__li">
+                  <a class="footer__a" href="#" title="Notification Settings">Notification Settings</a>
+                </li>
+              </ul>
+              </div>
+              <div class="footer__help footer__help--assistance">
+              <h3 class="footer__h3">Assistance</h3>
+              <ul class="footer__ul">
+                <li class="footer__li">
+                  <a class="footer__a" href="#" title="Support Center">Support Center</a>
+                </li>
+                <li class="footer__li">
+                  <a class="footer__a" href="#" title="Resellers">Resellers</a>
+                </li>
+                <li class="footer__li">
+                  <a class="footer__a" href="#" title="Return Policy">Returns Policy</a>
+                </li>
+                <li class="footer__li">
+                  <a class="footer__a" href="#" title="Cancellation Policy">Cancellation Policy</a>
+                </li>
+                <li class="footer__li">
+                  <a class="footer__a" href="#" title="Replacement Policy">Replacement Policy</a>
+                </li>
+                <li class="footer__li">
+                  <a class="footer__a" href="#" title="Accessibility Statement">Accessibility Statement</a>
+                </li>
+                <li class="footer__li">
+                  <a class="footer__a" href="#" title="Terms & Conditions">Terms & Conditions</a>
+                </li>
+                <li class="footer__li">
+                  <a class="footer__a" href="#" title="Privacy Policy">Privacy Policy</a>
+                </li>
+                <li class="footer__li">
+                  <a class="footer__a" href="#" title="California Notice at Collection">California Notice at Collection</a>
+                </li>
+                <li class="footer__li">
+                  <a class="footer__a footer__a--privacy-options" href="#" title="Your Privacy Choices">Your Privacy Choices
+                    <img class="footer__privacy-options" src="assets/svg/privacyoptions.svg" width="300" height="140" alt="Privacy options" loading="lazy">
+                  </a>
+                </li>
+              </ul>
+              </div>
+            </div>
+            <div class="footer__cols">
+              <div class="footer__help footer__help--about-funko">
+                <h3 class="footer__h3">About Funko</h3>
+                <ul class="footer__ul">
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="About Us">About Us</a>
+                  </li>
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="Blog">Blog</a>
+                  </li>
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="Fandom Directory">Fandom Directory</a>
+                  </li>
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="Funko Fusion Code Redemption">Funko Fusion Code Redemption</a>
+                  </li>
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="Fun TV">Fun TV</a>
+                  </li>
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="Locations">Locations</a>
+                  </li>
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="Investors">Investors</a>
+                  </li>
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="Careers">Careers</a>
+                  </li>
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="Store Locator">Store Locator</a>
+                  </li>
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="eBay">eBay</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__help footer__help--connect-with-us">
+                <h3 class="footer__h3">Connect with Us</h3>
+                <ul class="footer__ul">
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="Contact Us">Contact Us</a>
+                  </li>
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="Instagram">Instagram</a>
+                  </li>
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="YouTube">YouTube</a>
+                  </li>
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="Facebook">Facebook</a>
+                  </li>
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="Twitter">Twitter</a>
+                  </li>
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="TikTok">TikTok</a>
+                  </li>
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="Funko App">Funko App</a>
+                  </li>
+                  <li class="footer__li">
+                    <a class="footer__a" href="#" title="Digital Pop!">Digital Pop!</a>
+                  </li>
+                </ul>
+  
+                <div class="footer__stores stores">
+                  <a href="#" class="stores__a" title="Google Play">
+                    <img class="stores__img stores__img--google-play" src="assets/img/google-play-en-badge-logo.png" width="564" height="168" alt="Google Play logo" loading="lazy">
+                  </a>
+                  <a href="#" class="stores__a" title="App Store">
+                    <img class="stores__img stores__img--app-store" src="assets/img/apple-store-en-badge-logo.png" width="748" height="250" alt="App Store logo" loading="lazy">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer__bottom">
+          <p class="footer__copyright">© Funko. All rights reserved.</p>
+            <button class="footer__region" aria-label="Set region">
+              <img class="footer__flag" src="assets/svg/us-flag.svg" width="22" height="16" alt="United States of America flag" />
+              <span class="footer__location">United States</span>
+            </button>
+        </footer>
+      </div>
+    </footer>
+
+    <script src="js/products.js" type="module"></script>
+    <script src="js/fandom.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+.collection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 1280px) {
+    flex-direction: column;
+  }
+
+  &__column {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 4em 1em;
+    
+    &--left {
+      background: url('../assets/img/BuddyBlade-A-RealGhostbusters-BG.jpg') no-repeat center center / cover;
+    }
+
+    &--right {
+      background: url('../assets/img/BuddyBlade-B-GoldenGirls-BG.jpg') no-repeat   center center / cover
+    }
+  }
+
+  &__article {
+    width: 100%;
+
+    &--left {
+      color: var(--white);
+    }
+
+    &--right {
+      color: var(--carbon-black);
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media (max-width: 1280px) {
+      &--reverse {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 20em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  &__h2 {
+    color: inherit;
+    font-family: var(--type-black);
+    font-size: 2em;
+    text-transform: uppercase;
+    line-height: 1;
+
+    @media (max-width: 640px) {
+      font-size: 1.5em;
+    }
+  }
+
+  &__p {
+    color: inherit;
+    font-family: var(--type-medium);
+    font-size: 1.1em;
+    
+    @media (max-width: 640px) {
+      font-size: initial;
+    }
+  }
+
+  &__a {
+    width: fit-content;
+    padding: .75em 1.5em;
+    border-radius: 2em;
+    font-family: var(--type-bold);
+    font-size: .875em;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+
+    &--left {
+      color: var(--carbon-black);
+      background-color: var(--white);
+
+      &:hover {
+        color: var(--white);
+        background-color: var(--carbon-black);
+      }
+    }
+    
+    &--right {
+      color: var(--white);
+      background-color: var(--carbon-black);
+
+      &:hover {
+        color: var(--carbon-black);
+        background-color: var(--white);
+      }
+    }
+  }
+
+  &__product {
+    width: 100%;
+    max-width: 18em;
+    height: auto;
+    aspect-ratio: 1/1;
+    
+    @media (max-width: 640px) {
+      max-width: 10em;
+    }
+  }
+}

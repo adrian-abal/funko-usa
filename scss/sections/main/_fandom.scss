@@ -1,0 +1,196 @@
+.fandom {
+  padding: 4em 1em;
+
+  background: url('../../assets/img/scroll-list-bg.png') repeat-x center center / auto 100%;
+
+
+  &__h2 {
+    color: var(--white);
+    font-family: var(--type-black);
+    font-size: 2.3em;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (max-width: 640px) {
+      font-size: 1.8em;
+      text-align: center;
+    }
+  }
+
+  &__carousel {
+    width: 100%;
+    margin: 1em 0;
+    overflow: hidden;
+    position: relative;
+
+    @media  (max-width: 480px){
+      scrollbar-width: none;
+      scroll-snap-type: x mandatory;
+      overflow-x: scroll;
+    }
+  }
+
+  &__ul {
+    width: calc(100% / 6 * 9);
+    display: flex;
+    gap: 1em;
+
+    transition: transform .3s ease;
+    
+    @media (max-width: 1280px){
+      width: calc(100% / 5 * 9);
+    }
+
+    @media (max-width: 1024px){
+      width: calc(100% / 4 * 9);
+    }
+
+    @media (max-width: 768px){
+      width: calc(100% / 3 * 9);
+    }
+
+    @media (max-width: 640px){
+      width: calc(100% / 2 * 9);
+    }
+  }
+
+  &__li {
+    width: calc(100% / 9);
+    
+    @media (max-width: 640px){
+      width: calc(100% / 9 - 1.5em);
+      scroll-snap-align: center;
+    }
+  }
+
+  &__card {
+    border-radius: .75em;
+    background-color: var(--white);
+    position: relative;
+
+    will-change: transform;
+    transition: transform .3s ease;
+
+    &:hover {
+      transform: scale(.975);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__brand {
+    width: 100%;
+    max-width: 9em;
+    
+    @media (max-width: 480px){
+      max-width: 6em;
+    }
+
+  }
+
+  &__logo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: translateX(calc(12.75% - .5em));
+
+    @media (max-width: 480px){
+      transform: initial;
+    }
+  }
+
+  &__example {
+    width: 100%;
+    max-width: 4.25em;
+    display: flex;
+    align-items: center;
+    border-bottom-right-radius: .75em;
+    
+    @media (max-width: 480px){
+      max-width: 3.25em;
+    }
+
+  }
+
+  &__product {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom-right-radius: .75em;
+  }
+
+  &__span {
+    display: block;
+    color: var(--carbon-black);
+    font-size: .65em;
+    position: absolute;
+    bottom: .5em;
+    left: 1em;
+
+    @media (max-width: 480px){
+      font-size: .4em
+    }
+  }
+
+  .arrows {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 480px) {
+      display: none;
+    }
+
+    &__control {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: .5em;
+      border: none;
+      border-radius: 100%;
+      background-color: var(--white);
+      box-shadow: 0 1px .25em var(--black);
+      cursor: pointer;
+
+      position: absolute;
+      top: 37.5%;
+      transform: translateY(-37.5%);
+
+      &--previous {
+        margin: 0 0 0 1.5em;
+        left: 0;
+        transform: translateX(25%);
+      }
+
+      &--next {
+        margin: 0 1.5em 0 0;
+        right: 0;
+        transform: translateX(-25%);
+      }
+  
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+
+    &__svg {
+      width: 1.25em;
+      height: 1.25em;
+      fill: transparent;
+      stroke: var(--black);
+
+      &--previous {
+        transform: translateX(-5%);
+      }
+
+      &--next {
+        transform: translateX(5%);
+      }
+    }
+  }
+}

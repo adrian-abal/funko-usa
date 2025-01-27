@@ -1,0 +1,235 @@
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding: 4em 1em;
+  background-color: var(--white);
+
+  &__h2 {
+    color: var(--carbon-black);
+    font-family: var(--type-black);
+    font-size: 2.3em;
+
+    @media (max-width: 640px) {
+      font-size: 1.8em;
+      text-align: center;
+    }
+  }
+
+  &__carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    @media  (max-width: 480px){
+      scrollbar-width: none;
+      scroll-snap-type: x mandatory;
+      overflow-x: scroll;
+    }
+  }
+  
+  &__ul {
+    width: calc(100% / 5 * 10);
+    display: flex;
+    gap: 1em;
+    
+    transition: transform .3s ease;
+   
+    @media (max-width: 1024px) {
+      width: calc(100% / 4 * 10);
+    }
+   
+    @media (max-width: 960px) {
+      width: calc(100% / 3 * 10);
+    }
+
+    @media (max-width: 768px) {
+      width: calc(100% / 2 * 10);
+    }
+
+    @media (max-width: 480px) {
+      width: calc(100% / 1.25 * 10);
+      scroll-snap-align: center;
+    }    
+  }
+
+  &__li {
+    width: calc(100% / 10);
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 480px) {
+      scroll-snap-align: center;
+    }    
+  }
+
+  &__article {
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    flex-grow: 1;
+    gap: 1em;
+    border: 1px solid #ddd;
+    border-radius: .75em;
+    position: relative;
+  }
+  
+  &__add-to-wishlist {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+
+    &:hover > .products__svg {
+      fill: #ff3e4d;
+    }
+  }
+  
+  &__svg {
+    width: 2em;
+    height: 2em;
+    fill: transparent;
+    stroke: var(--carbon-black);
+    stroke: #ff3e4d;
+  }
+
+  &__tag {
+    padding: .25em .75em;
+    color: var(--white);
+    background-color: #0074ca;
+    font-family: var(--type-extrabold);
+    text-transform: uppercase;
+    position: absolute;
+    top: -1em;
+    left: 2em;
+    transform-origin: left ;
+    transform: rotate(90deg);
+  }
+
+  &__overview {
+    width: 100%;
+    border-radius: .25em;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: .25em;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+  }
+
+  &__category {
+    font-size: .75em;
+    text-transform: uppercase;
+  }
+
+  &__h3 {}
+
+  &__a {
+    color: var(--carbon-black);
+    font-family: var(--type-black);
+    font-size: .875em;
+    text-transform: uppercase;
+    line-height: 1;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    margin-top: auto;
+  }
+
+  &__price {}
+
+  &__add-to-cart {
+    width: 100%;
+    padding: .5em 1em;
+    border: 2px solid transparent;
+    border-radius: 2em;
+    background: #f3f3f3;
+    font-family: var(--type-semibold);
+    font-size: .95em;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      border: 2px solid var(--carbon-black);
+    }
+  }
+
+  /* Arrows */
+  .arrows {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 480px) {
+      display: none;
+    }
+    
+    &__control {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: .5em;
+      border: none;
+      border-radius: 100%;
+      background-color: var(--white);
+      box-shadow: 0 1px .25em var(--black);
+      cursor: pointer;
+  
+      position: absolute;
+      top: 37.5%;
+      transform: translateY(-37.5%);
+
+      &--previous {
+        left: 1.5em;
+      }
+
+      &--next {
+        right:  1.5em;
+      }
+  
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+
+    &__svg {
+      width: 1.25em;
+      height: 1.25em;
+      fill: transparent;
+      stroke: var(--black);
+
+      &--previous {
+        transform: translateX(-5%);
+      }
+
+      &--next {
+        transform: translateX(5%);
+      }
+    }
+  }
+}

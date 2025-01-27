@@ -1,0 +1,215 @@
+.hero {
+  &__slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  &__slides {
+    width: calc(100% * 3);
+    display: flex;
+
+    transition: transform .6s ease;
+  }
+  
+  &__slide {
+    width: calc(100% / 3);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 1em;
+
+    &--first {
+      color: var(carbon-black);
+      background: url('../assets/img/Feature_JurassicParkHatchlings_Background.jpg') no-repeat center center / cover
+    }
+    
+    &--second{
+      color: var(--carbon-black);
+      background: url('../assets/img/Feature_ValentinesDay-1.png') no-repeat center center / cover;
+    }
+
+    &--third {
+      color: var(--carbon-black);
+      background: url('../assets/img/PY_VDAY25_WEB_HomepageBanner_BG.png') no-repeat center center / cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      gap: 1em;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1em;
+
+    @media (max-width: 1024px) {
+      max-width: 40em;
+    }
+  }
+
+  &__span {
+    color: inherit;
+    font-family: var(--type-medium);
+    text-transform: uppercase;
+    font-size: .875em;
+  }
+
+  &__h2 {
+    color: inherit;
+    font-family: var(--type-black);
+    font-size: 3em;
+    text-transform: uppercase;
+    line-height: 1;
+
+    @media (max-width: 1024px) {
+      font-size: 2.5em;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2em;
+    }
+  }
+
+  &__p {
+    color: inherit;
+    font-family: var(--type-medium);
+    font-size: 1.1em;
+    
+    @media (max-width: 640px) {
+      font-size: initial;
+    }
+  }
+  
+  &__a {
+    margin: 1em 0 0;
+    padding: .75em 1.5em;
+    border-radius: 2em;
+    color: var(--white);
+    background-color: var(--carbon-black);
+    font-family: var(--type-bold);
+    font-size: .875em;
+    text-transform: uppercase;
+
+    &:hover {
+      color: var(--carbon-black);
+      background-color: var(--white);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 40em;
+    height: auto;
+    aspect-ratio: 160/123;
+  }
+
+  /* Slider controls (arrows & dots) */
+
+  &__controls {}
+  
+  .arrows {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (max-width: 1280px) {
+      display: none;
+    }
+
+    &__control {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background: transparent;
+      opacity: .625;
+      cursor: pointer;
+  
+      &--previous {
+        margin: 0 0 0 2.5em;
+      }
+      &--next {
+        margin: 0 2.5em 0 0;
+      }
+  
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &__svg {
+      width: 2.625em;
+      height: 2.625em;
+      fill: transparent;
+      stroke: var(--white);
+      filter: drop-shadow(0 0 4px var(--black));
+    }
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+
+    position: absolute;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &__li {}
+
+    &__control {
+      width: .75em;
+      height: .75em;
+      border: none;
+      border-radius: 2em;
+      background-color: var(--carbon-black);
+      cursor: pointer;
+  
+      position: relative;
+      box-shadow: 0 0 3px 0.15em var(--white);
+  
+      &::after {
+        content: '';
+        width: .75em;
+        height: .75em;
+        display: block;
+        border: none;
+        border-radius: 100%;
+        background-color: var(--white);
+      
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+  
+      &:hover, &--active {
+        outline: 1px solid var(--carbon-black);
+        outline-offset: 2px;
+        box-shadow: 0 0 4px .35em var(--white);
+      }
+    }
+  }
+}
